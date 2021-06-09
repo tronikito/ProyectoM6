@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="700.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="656.0" prefWidth="535.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.ClientListViewController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="541.0" minWidth="10.0" prefWidth="506.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="81.0" minHeight="0.0" prefHeight="81.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="487.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="88.0" minHeight="0.0" prefHeight="88.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="700.0" prefHeight="386.0" prefWidth="476.0" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+         <children>
+            <TableView fx:id="tableClient" maxHeight="1.7976931348623157E308" maxWidth="700.0" prefHeight="217.0" prefWidth="554.0">
+              <columns>
+                <TableColumn fx:id="colID" prefWidth="75.0" text="DNI" />
+                <TableColumn fx:id="colName" prefWidth="97.0" text="Nombre" />
+                  <TableColumn fx:id="colCountry" prefWidth="111.0" text="País" />
+                  <TableColumn fx:id="colCreatedAt" prefWidth="199.0" text="Fecha Creación" />
+              </columns>
+            </TableView>
+         </children>
+         <padding>
+            <Insets left="25.0" right="25.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" maxHeight="40.0" maxWidth="541.0" prefHeight="40.0" prefWidth="541.0">
+         <children>
+            <Label text="Nombre">
+               <padding>
+                  <Insets bottom="15.0" right="15.0" top="15.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="txtName">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </TextField>
+            <Button fx:id="btnSearch" mnemonicParsing="false" text="Buscar">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="btnRefreshTable" mnemonicParsing="false" text="Mostrar Todos">
+               <HBox.margin>
+                  <Insets left="25.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+         <GridPane.margin>
+            <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+         </GridPane.margin>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="68.0" prefWidth="506.0" GridPane.rowIndex="2">
+         <children>
+            <Button fx:id="btnCreateClient" mnemonicParsing="false" onMouseClicked="#clickBtnCreateClient" text="Crear Cliente">
+               <HBox.margin>
+                  <Insets right="15.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="btnCreateVideoGame" mnemonicParsing="false" onMouseClicked="#clickBtnCreateVideoGame" text="Crear Videojuego">
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</GridPane>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane prefHeight="320.0" prefWidth="414.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.CreateClientViewController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="411.0" minWidth="10.0" prefWidth="408.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <VBox alignment="CENTER" prefHeight="413.0" prefWidth="411.0">
+         <children>
+            <Label prefHeight="70.0" prefWidth="351.0" text="Crear un nuevo cliente">
+               <VBox.margin>
+                  <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER_LEFT" prefHeight="172.0" prefWidth="402.0">
+               <children>
+                  <VBox prefHeight="185.0" prefWidth="281.0">
+                     <children>
+                        <Label text="Nombre">
+                           <padding>
+                              <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label text="DNI (numero)">
+                           <padding>
+                              <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label text="Es socio">
+                           <padding>
+                              <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="46.0" text="Pais">
+                           <padding>
+                              <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets top="15.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox prefHeight="206.0" prefWidth="308.0">
+                     <children>
+                        <TextField fx:id="txtNom" alignment="TOP_LEFT" prefHeight="25.0" prefWidth="247.0" promptText="Pep">
+                           <VBox.margin>
+                              <Insets bottom="10.0" right="10.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="txtID" prefHeight="25.0" prefWidth="259.0" promptText="12345678">
+                           <VBox.margin>
+                              <Insets bottom="10.0" right="10.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <HBox prefHeight="22.0" prefWidth="197.0">
+                           <children>
+                              <RadioButton fx:id="radSi" mnemonicParsing="false" text="Si">
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </RadioButton>
+                              <RadioButton fx:id="radNo" mnemonicParsing="false" text="No">
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </RadioButton>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="15.0" right="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <TextField fx:id="txtPais" layoutX="10.0" layoutY="46.0" prefHeight="25.0" prefWidth="259.0" promptText="Alemanya" />
+                        <HBox alignment="BOTTOM_CENTER" prefHeight="58.0" prefWidth="245.0">
+                           <children>
+                              <Button fx:id="btnAdd" mnemonicParsing="false" onMouseClicked="#clickBtnAdd" text="Añadir">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="btnBack" mnemonicParsing="false" onMouseClicked="#clickBtnBack" text="Volver">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="20.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets top="15.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="25.0" left="25.0" right="25.0" />
+               </VBox.margin>
+            </HBox>
+            <Label fx:id="txtError" alignment="CENTER" textFill="RED" />
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+   </children>
+</GridPane>

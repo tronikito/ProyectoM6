@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="TOP_CENTER" prefHeight="339.0" prefWidth="339.0" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.ConnectionViewController">
+   <children>
+      <HBox prefHeight="21.0" prefWidth="369.0">
+         <children>
+            <RadioButton fx:id="radioSQL" focusTraversable="false" mnemonicParsing="false" prefHeight="28.0" prefWidth="138.0" text="MySQL">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets right="15.0" />
+               </HBox.margin>
+            </RadioButton>
+            <RadioButton fx:id="radioNoSQL" focusTraversable="false" mnemonicParsing="false" prefHeight="68.0" prefWidth="178.0" text="MongoDB">
+               <padding>
+                  <Insets bottom="5.0" left="25.0" right="5.0" top="5.0" />
+               </padding>
+            </RadioButton>
+         </children>
+         <VBox.margin>
+            <Insets top="15.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label text="Host">
+                     <padding>
+                        <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Puerto">
+                     <padding>
+                        <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Usuario">
+                     <padding>
+                        <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Contraseña">
+                     <padding>
+                        <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="130.0" prefWidth="197.0">
+               <children>
+                  <TextField fx:id="txtHost" focusTraversable="false">
+                     <VBox.margin>
+                        <Insets bottom="10.0" right="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="txtPort" focusTraversable="false">
+                     <VBox.margin>
+                        <Insets bottom="10.0" right="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="txtUser" focusTraversable="false">
+                     <VBox.margin>
+                        <Insets bottom="10.0" right="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="txtPass" focusTraversable="false">
+                     <VBox.margin>
+                        <Insets right="10.0" />
+                     </VBox.margin>
+                  </TextField>
+               </children>
+            </VBox>
+         </children>
+         <VBox.margin>
+            <Insets top="15.0" />
+         </VBox.margin>
+      </HBox>
+      <VBox alignment="CENTER" prefHeight="74.0" prefWidth="299.0">
+         <children>
+            <Button fx:id="btnLogin" text="Connect" />
+         </children>
+      </VBox>
+      <Label fx:id="labelError" textFill="RED" />
+   </children>
+   <padding>
+      <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+   </padding>
+</VBox>
